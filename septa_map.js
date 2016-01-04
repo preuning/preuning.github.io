@@ -65,7 +65,7 @@ Took this out so it could work without php running... using hard-coded values fr
 function getSeptaParams(start, end) {
     var septaParams = {
         type:"POST",
-        dataType: 'jsonp',
+        dataType: 'json',
         url: "http://www3.septa.org/hackathon/TransitViewAll/"
     }
     
