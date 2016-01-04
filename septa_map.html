@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <style>
+      /* Labels */
+      #map_area {
+          width: 1000px; height:500px;
+      }
+
+      .map-marker-label {
+          position: absolute;
+          color: black;
+          font-weight: bold;
+          font-size: 12px;
+          white-space:nowrap;
+          text-shadow:
+            1px 1px 0 #FFF,
+            -1px -1px 0 #FFF,  
+            1px -1px 0 #FFF,
+            -1px 1px 0 #FFF,
+            1px 1px 0 #FFF;
+      }
+
+    </style>
+
+    <link rel="shortcut icon" href="Transport-Train-icon.png" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="septa_map.js"></script>
+    <script type="text/javascript" src="trainJSON.js"></script>
+  </head>
+
+  <body>
+    <div id="date_label"></div>
+    <br>
+    <input id="train_selection" style="width:400px;" onBlur="blurTrainSearch();" onFocus="focusTrainSearch();">
+    <input type="button" value="Clear Map" onclick="clearMap();">
+    <br><br>
+    <div id='map_area'></div>
+  </body>
+</html>
