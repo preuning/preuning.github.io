@@ -8,8 +8,8 @@ $(function () {
 
 /*
 Took this out so it could work without php running... using hard-coded values from trainJSON.js
-    $.ajax(getSeptaParams()).done(function(o) {
 */
+    $.ajax(getSeptaParams()).done(function(o) {
         septaJSON = JSON.parse(o);
 
         $.each(septaJSON, function (key, val) {
@@ -57,15 +57,15 @@ Took this out so it could work without php running... using hard-coded values fr
         } catch (err) {
         }
 
-//    });
+    });
 
 
 });
 
 function getSeptaParams(start, end) {
     var septaParams = {
-        type:"POST",
-        url: "getSeptaLocations.php"
+        type:"GET",
+        url: "http://www3.septa.org/hackathon/TransitViewAll/"
     }
     
     return septaParams;
