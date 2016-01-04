@@ -9,7 +9,7 @@ $(function () {
 /*
 Took this out so it could work without php running... using hard-coded values from trainJSON.js
 */
-    //$.ajax(getSeptaParams()).done(function(o) {
+    $.ajax(getSeptaParams()).done(function(o) {
         septaJSON = JSON.parse(o);
 
         $.each(septaJSON, function (key, val) {
@@ -57,7 +57,7 @@ Took this out so it could work without php running... using hard-coded values fr
         } catch (err) {
         }
 
-    //});
+    });
 
 
 });
